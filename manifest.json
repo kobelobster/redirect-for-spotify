@@ -1,0 +1,20 @@
+{
+
+    "manifest_version": 2,
+    "name": "Redirect for Spotify",
+    "version": "0.2.0",
+    "description": "Redirects open.spotify.com links to your desktop application.",
+    "icons": {
+      "48": "icons/icon-48.png",
+      "96": "icons/icon-96.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://open.spotify.com/*"],
+        "js": ["redirect.js"]
+      }
+    ],
+    "permissions": [
+      "webNavigation"
+    ]
+  }
